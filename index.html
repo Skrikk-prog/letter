@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Monthsary ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f3e5f5;
+    color:#000;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(156,39,176,.35),rgba(156,39,176,.35)),
+    url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(255,255,255,.7);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(8px);
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:#9c27b0;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#7b1fa2;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
+    color:#7b1fa2;
+    margin-bottom:40px;
+}
+
+.letter{
+    max-width:800px;
+    margin:auto;
+    background:#ede7f6;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    line-height:1.8;
+    color:#000;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.timeline{
+    max-width:800px;
+    margin:auto;
+}
+
+.event{
+    background:#ede7f6;
+    padding:20px;
+    margin:20px 0;
+    border-left:5px solid #7b1fa2;
+    border-radius:10px;
+}
+
+.music-card{
+    text-align:center;
+    background:#ede7f6;
+    padding:40px;
+    border-radius:20px;
+    max-width:600px;
+    margin:auto;
+}
+
+.surprise{
+    text-align:center;
+}
+
+.surprise button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#7b1fa2;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.hidden-message{
+    display:none;
+    margin-top:30px;
+    font-size:1.5rem;
+    color:#7b1fa2;
+    animation:fadeIn 1s ease;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#e1bee7;
+}
+
+.heart{
+    position:fixed;
+    color:#9c27b0;
+    pointer-events:none;
+    animation:floatUp linear forwards;
+}
+
+.hidden-sections{
+    display:none;
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile Responsive Design */
+@media(max-width:768px){
+    .hero{
+        height:auto;
+        padding:60px 20px;
+    }
+
+    .hero-content{
+        padding:30px 20px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .section-title{
+        font-size:2rem;
+        margin-bottom:30px;
+    }
+
+    .letter{
+        padding:25px;
+        font-size:0.95rem;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+        gap:15px;
+    }
+
+    .gallery img{
+        height:200px;
+    }
+
+    .btn{
+        padding:10px 20px;
+        font-size:0.9rem;
+    }
+
+    .surprise button{
+        padding:12px 25px;
+        font-size:0.95rem;
+    }
+
+    .hidden-message{
+        font-size:1.2rem;
+    }
+
+    .event{
+        padding:15px;
+        margin:15px 0;
+    }
+
+    .music-card{
+        padding:25px;
+    }
+
+    footer{
+        padding:20px;
+        font-size:0.9rem;
+    }
+}
+
+@media(max-width:480px){
+    body{
+        font-size:14px;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero-content{
+        padding:20px 15px;
+        border-radius:15px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+        margin-bottom:10px;
+    }
+
+    .hero p{
+        font-size:0.9rem;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .section-title{
+        font-size:1.5rem;
+        margin-bottom:20px;
+    }
+
+    .letter{
+        padding:20px;
+        font-size:0.9rem;
+        line-height:1.6;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .gallery img{
+        height:150px;
+        border-radius:10px;
+    }
+
+    .btn{
+        padding:10px 18px;
+        font-size:0.85rem;
+        margin-top:15px;
+    }
+
+    .surprise button{
+        padding:10px 20px;
+        font-size:0.9rem;
+    }
+
+    .hidden-message{
+        font-size:1rem;
+        margin-top:20px;
+    }
+
+    .event{
+        padding:12px;
+        margin:12px 0;
+        border-left-width:3px;
+    }
+
+    .music-card{
+        padding:20px;
+    }
+
+    footer{
+        padding:15px;
+        font-size:0.85rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Happy Monthsary </h1>
+        <p>Every day with you is my favorite day.</p>
+        <a href="#letter" class="btn">Read My Letter</a>
+    </div>
+</header>
+
+<section id="letter">
+    <h2 class="section-title">My Letter To You</h2>
+    <div class="letter">
+        Babe,
+
+        Thank you for every smile, every laugh, every moment we've shared.
+        You make ordinary days feel special and every memory worth keeping.
+
+        No matter what challenges come our way, I will continue choosing you,
+        loving you, and appreciating everything about you even though we have little arguments,
+        but I know we will always find our way back to talk things out and grow stronger together.
+        ILOVEEEEEYOUUUUUUSOOOO MUCHHHH!!
+
+        Happy Monthsary ❤️
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Our Memories</h2>
+
+    <div class="gallery">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+        <img src="4.jpg">
+        <img src="5.jpg">
+        <img src="6.jpg">
+    </div>
+</section>
+
+
+<section class="surprise hidden-sections">
+    <h2 class="section-title">A Little Surprise</h2>
+
+    <button onclick="showMessage()">
+        Click Me ❤️
+    </button>
+
+    <div id="message" class="hidden-message">
+        You are my favorite person, my safe place,
+        and my greatest blessing. ❤️
+    </div>
+</section>
+
+
+
+<script>
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
+
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+15)+"px";
+    heart.style.bottom="-30px";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,400);
+</script>
+
+</body>
+</html>
